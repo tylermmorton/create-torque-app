@@ -1,0 +1,27 @@
+version: 3
+tasks:
+  install:
+    cmds:
+      - npm i
+      - go mod download
+
+  lint:
+    cmds:
+      - npx eslint ./**/*.tmpl.html --fix
+
+  format:
+    cmds:
+      - npx prettier --write --parser go-template ./**/**/*.tmpl.html
+
+  build:css:
+    cmds:
+      - npx tailwindcss build -i styles/tailwind.css -o .build/assets/app.css
+
+  build:go:
+    cmds:
+      - go generate ./...
+      - go build -o .build/bin/$(basename $(pwd)) app.go
+
+  build:image:
+    cmds:
+      - docker build -t $(basename $(pwd)) .
