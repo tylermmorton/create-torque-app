@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{{ .TitlePrefix }}{{ .Title }}{{ .TitleSuffix }}</title>
+
+    {{ range .Links }}
+        {{ template "link" . }}
+    {{ end }}
+
+    {{ range .Scripts }}
+        {{ template "script" . }}
+    {{ end }}
+  
+  <style>
+      html,
+      body {
+          height: 100%;
+      }
+  </style>
+</head>
+
+<body>
+{{ template "body" . }}
+</body>
+</html>

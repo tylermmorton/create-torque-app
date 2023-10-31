@@ -4,6 +4,7 @@ tasks:
     cmds:
       - npm i
       - go mod download
+      - go install github.com/tylermmorton/tmpl/cmd/tmpl@latest
 
   lint:
     cmds:

@@ -1,0 +1,11 @@
+{{- if .IsValid }}
+  <script
+          {{- if ne .Src "" }} {{ .Attr "src" .Src }}{{end -}}
+          {{- if ne .Type "" }} {{ .Attr "type" .Type }}{{end -}}
+          {{- if ne .Integrity "" }} {{ .Attr "integrity" .Integrity }}{{end -}}
+          {{- if .Async }} async{{end -}}
+
+  >
+      {{- if ne .Content "" }}{{ .Content }}{{ end -}}
+  </script>
+{{ end -}}
