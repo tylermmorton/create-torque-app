@@ -1,6 +1,8 @@
 # create-torque-app
 
-This project is the official template project for creating a new torque app. The template is designed to get you up and running quickly.
+`create-torque-app` is the official template repository for creating a new [torque](https://github.com/tylermmorton/torque) app. This project is designed as a starting point for building out web apps in Go using the torque framework. 
+
+## Getting Started
 
 Get started by running the official Golang tool `gonew`
 
@@ -9,9 +11,9 @@ $ go install golang.org/x/tools/cmd/gonew@latest
 $ gonew github.com/tylermmorton/create-torque-app github.com/<your-username>/<your-app-name>
 ```
 
-or simply fork this repository and clone it locally!
+or simply click 'Use this template' above.
 
-# The Stack
+## The Stack
 The `create-torque-app` template project is preconfigured with the following technologies:
 - [torque](https://lbft.dev) - Webserver framework
 - [htmx](https://htmx.org/) - Frontend framework
@@ -24,12 +26,12 @@ It also comes preconfigured with the following tooling:
 - [prettier](https://prettier.io/) - JavaScript & HTML formatter
 - [Taskfile](https://taskfile.dev/) - Task runner & mini build system
 
-# Project Structure
+## Project Structure
 
 - `go.mod` & `go.sum` - Golang module files for managing Go dependencies.
 - `package.json` & `package-lock.json` - Node module files for managing Node dependencies.
 
-## App directories
+### App directories
 
 | Directory     | Purpose |
 |---------------|---------|
