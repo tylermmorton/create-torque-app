@@ -1,15 +1,23 @@
 # create-torque-app
 
-This project is the official template project for creating a new torque app. The template is designed to get you up and running quickly.
+This project is the official template project for creating a new torque app. The template includes a one-time setup script to get you up and running quickly.
 
-Get started by running the official Golang tool `gonew`
+Get started by clicking 'Use this template' above. 
+
+After you've created a new repository, clone it locally into your `$GOPATH` and run the one time setup script:
 
 ```shell
-$ go install golang.org/x/tools/cmd/gonew@latest
-$ gonew github.com/tylermmorton/create-torque-app github.com/<your-username>/<your-app-name>
+git clone <your-repo-url>
+cd <your-repo-name>
+./one_time_setup.sh
 ```
 
-or simply fork this repository and clone it locally!
+The `one_time_setup.sh` script does the following:
+- Changes necessary project files to match your new project name
+- Resolves go dependencies via `go mod tidy`
+- Install the build tool [Taskfile](https://taskfile.dev/) via `go install`
+- Provides next steps for getting started
+- Deletes itself
 
 # The Stack
 The `create-torque-app` template project is preconfigured with the following technologies:
